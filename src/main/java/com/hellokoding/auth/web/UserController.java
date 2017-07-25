@@ -41,7 +41,7 @@ public class UserController {
         userService.save(userForm);
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
-
+        
         return "redirect:/welcome";
     }
 
@@ -52,12 +52,13 @@ public class UserController {
 
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
-
+        
         return "login";
     }
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
+    	
         return "welcome";
     }
 }
