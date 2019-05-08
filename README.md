@@ -15,6 +15,6 @@
 
 ## Run
 ```mvn clean spring-boot:run```
-z
+zss
 
 
